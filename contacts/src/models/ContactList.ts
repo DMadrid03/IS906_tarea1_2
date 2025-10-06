@@ -22,9 +22,8 @@ export class ContactList{
     }
 
     public deleteContact(id: string): boolean{
-        const index = this.contacts.findIndex(contact => contact.id === id);
-        
-        if(index)
+        const index = this.contacts.findIndex(contact => contact.id === id);        
+        if(index !== -1)
         {
             this.contacts.splice(index,1)
             return true
